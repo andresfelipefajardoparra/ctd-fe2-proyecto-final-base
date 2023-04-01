@@ -3,6 +3,7 @@ import Cita from "./features/quote/Cita";
 import "./App.css";
 import Bio from "./features/bio/Bio";
 import Noticias from "./features/news/Noticias";
+import styled from "styled-components";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       </header>
       <section className="App-bio">
         <Bio />
-      </section>
+             </section>
+      
       <section className="App-news">
         <Noticias />
       </section>
