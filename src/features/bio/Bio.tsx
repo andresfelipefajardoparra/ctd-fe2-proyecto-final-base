@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NombresSimpsons, INFO_SIMPSONS } from "./constants";
 import styles from "./styles.module.css";
 
-import {ContenedorBotones,Boton } from './styled';
+import {ContenedorBotones,Boton, BotonActivo, Thing } from './styled';
 
 
 
@@ -37,14 +37,14 @@ const Bio = () => {
       <div>
         <div>
           <img
-            src={bioActiva.image}
+            src= {bioActiva.image}
             alt={bioActiva.nombre}
             className={styles.bioImagen}
           />
         </div>
         <div>
-          <h3 className={styles.bioNombre}>{bioActiva.nombre}</h3>
-          <p className={styles.bioDescripcion}>{bioActiva.descripcion}</p>
+          <BotonActivo className="yo">{bioActiva.nombre}</BotonActivo>
+          <Thing>{bioActiva.descripcion}</Thing>
         </div>
       </div>
     </div>
