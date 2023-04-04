@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 
-import { ContenedorCita } from "../quote/styled";
+
 
 
 
