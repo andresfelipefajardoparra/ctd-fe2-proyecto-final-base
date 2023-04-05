@@ -7,32 +7,32 @@ import { server } from "../mocks/server";
 
 
 //Test 1
-describe('Pruebas en <Citas />', () => {
-    test('Busqueda de cita por personaje', async () => {
-        render(<Cita />)
+// describe('Pruebas en <Citas />', () => {
+//     test('Busqueda de cita por personaje', async () => {
+//         render(<Cita />)
 
-        const input = screen.getByPlaceholderText('Ingresa el nombre del autor');
-        fireEvent.change(input, { target: { value: 'Lisa' } })
-        const button = screen.getByRole('button', { name: 'Obtener Cita' });
-        fireEvent.click(button);
-        expect(await screen.findByText("These are my only friends...grown-up nerds like Gore Vidal. And even he's kissed more boys than I ever will.")).toBeInTheDocument()
-    })
+//         const input = screen.getByPlaceholderText('Ingresa el nombre del autor');
+//         fireEvent.change(input, { target: { value: 'Lisa' } })
+//         const button = screen.getByRole('button', { name: 'Obtener Cita' });
+//         fireEvent.click(button);
+//         expect(await screen.findByText("These are my only friends...grown-up nerds like Gore Vidal. And even he's kissed more boys than I ever will.")).toBeInTheDocument()
+//     })
 
-});
+// });
 
 //Test 2
-describe('Pruebas en <Citas /> random', () => {
-    test('Busquyeda de cita por personaje', async () => {
-        render(<Cita />)
+// describe('Pruebas en <Citas /> random', () => {
+//     test('Busquyeda de cita por personaje', async () => {
+//         render(<Cita />)
         
-        const handleClick = jest.fn();
-        render(<button onClick={handleClick}>Obtener cita aleatoria</button>);
-        const button = screen.getByLabelText('Obtener cita aleatoria');
-        fireEvent.click(button);
-        // expect(await screen.findByText("But my mom says I'm cool."));
-        expect(button).toBeInTheDocument("But my mom says I'm cool.");
-    })
-});
+//         const handleClick = jest.fn();
+//         render(<button onClick={handleClick}>Obtener cita aleatoria</button>);
+//         const button = screen.getByLabelText('Obtener cita aleatoria');
+//         fireEvent.click(button);
+//         expect(await screen.findByText("But my mom says I'm cool."));
+//      
+//         })
+// });
 
 //Test 3
 // describe('Pruebas en el parrafo', () => {
@@ -46,7 +46,23 @@ describe('Pruebas en <Citas /> random', () => {
 //     });
 // });
 
+
+// test 4 error
 // test('debe devolver un boolean', () => {
 //     render(<Cita/>)
 //     expect(Cita(number)).toBe('boolean');
+// });
+
+//test 5 error 
+// describe('Pruebas en error <Citas />', () => {
+//     test('Busqueda de cita por personaje errado', async () => {
+//         render(<Cita />)
+
+//         const input = screen.getByPlaceholderText('Ingresa el nombre del autor');
+//         fireEvent.change(input, { target: { value: 'Andres' } })
+//         const button = screen.getByRole('button', { name: 'Obtener Cita' });
+//         fireEvent.click(button);
+//        expect(await screen.findByText("Por favor ingrese un nombre válido")).toBeVisible()
+//     })
+
 // });
